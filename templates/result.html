@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+    {% block content %}
+        {% if result %}
+        <H3>The two numbers {{ action_performed }}....is {{ result }}</H3>
+        {% endif %}
+        {% if not result %}
+        <H3>The two numbers {{ action_performed }}</H3>
+        {% endif %}
+    {% endblock %}

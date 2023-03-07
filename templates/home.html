@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+    {% block content %}
+        <H1>Hello Class...it is {{name}}</H1>
+{#        <form action='add', method="post">#}
+{#            {% csrf_token %}#}
+{#            <H2>Adding two numbers.</H2>#}
+{#            Enter the first number: <input type="text" name="num1"><br/>#}
+{#            Enter the second number: <input type="text" name="num2"><br/>#}
+{#            <input type="submit">#}
+{#        </form>#}
+        <form action='perform_two_numbers', method="post">
+            {% csrf_token %}
+            <H3>Enter the first number: <input type="text" name="num1"><br/>
+                Enter the second number: <input type="text" name="num2"><br/></H3>
+{#            <input type="submit">#}
+            <button name="add_num" type="submit" value="add_num">Add</button>
+            <button name="subtract_num" type="submit" value="subtract_num">Subtract</button>
+            <button name="multiply_num" type="submit" value="multiply_num">Multiply</button>
+            <button name="divide_num" type="submit" value="divide_num">Divide</button>
+
+        </form>
+    {% endblock %}
